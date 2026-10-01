@@ -18,3 +18,13 @@ class AboutPageView(TemplateView):
         context["contact_address"] = "123 Main Street"
         context["phone_number"] = "555-555-5555"
         return context
+
+class ProductsPageView(TemplateView):
+    template_name = "products.html"
+
+    def get_context_data(self, **kwargs):
+        context = {
+            "product_list": ["Product 1", "Product 2", "Product 3", "Product 4"],
+            "subliminal_messaging": "BUY! BUY! BUY!"
+        }
+        return context

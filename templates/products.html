@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Company Products Page</h1>
+<p>There are {{ product_list|length }} products to spend money on!</p>
+
+<ul>
+    {% for i in product_list %}
+    <li>{{i}}</li>
+    {% endfor %}
+</ul>
+<p>{{ subliminal_messaging}}</p>
+{% endblock %}
